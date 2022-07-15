@@ -1,10 +1,11 @@
-# App de Cálculo de IMC
+# Programa Teste Para Calculo de IMC
+from dev import calculo_imc, classificacao
 
 nome = input("Digite seu nome: ")
-peso = float(input("Digite seu peso: "))
-altura = float(input("Digite sua altura: "))
+altura = float(input("\nDigite sua altura: "))
+peso = float(input("\nDigite seu peso: "))
 
-imc = peso / altura ** 2
+imc = calculo_imc(peso, altura)
 
-print(f'{nome}, seu imc é {imc:.2f}')
 
+print(f'{nome}, seu IMC é {imc:.2f}.', classificacao(imc))
